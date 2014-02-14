@@ -16,9 +16,11 @@
  */
 package net.oauth.jsontoken;
 
+import org.joda.time.DateTimeConstants;
 import org.joda.time.Duration;
 import org.joda.time.Instant;
 import org.joda.time.Interval;
+import org.joda.time.field.FieldUtils;
 
 /**
  * Default implementation of {@link Clock}, which accepts clock skews (when comparing time
@@ -26,7 +28,8 @@ import org.joda.time.Interval;
  */
 public class SystemClock implements Clock {
 
-  public static final Duration DEFAULT_ACCEPTABLE_CLOCK_SKEW = Duration.standardMinutes(2);
+  public static final Duration DEFAULT_ACCEPTABLE_CLOCK_SKEW
+      = new Duration(FieldUtils.safeMultiply(2, DateTimeConstants.MILLIS_PER_MINUTE));
 
   private final Duration acceptableClockSkew;
 

@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>0.1-20140214</version>
 
 	<groupId>com.google.wallet</groupId>
 	<artifactId>wallet-lib</artifactId>
@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<version>1.6</version>
+			<version>1.5.2</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
